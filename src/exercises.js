@@ -8,6 +8,7 @@ function commonEnd(a, b) {
 
 function endsMeet(values, n) {
   // write your code here
+  //i neeed to write my code here
 }
 
 function difference(numbers) {
