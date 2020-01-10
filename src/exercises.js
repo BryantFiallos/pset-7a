@@ -13,7 +13,9 @@ else {
 
 function endsMeet(values, n) {
   // write your code here
-  //i neeed to write my code here
+let finalArray = [];
+let firstItem = values[0];
+
 }
 
 function difference(numbers) {
