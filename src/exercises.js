@@ -14,7 +14,9 @@ else {
 function endsMeet(values, n) {
   // write your code here
 let finalArray = [];
-let firstItem = values[0];
+finalArray.push(values[0]);
+
+for (let j = values.length - 1; ) 
 
 }
 
