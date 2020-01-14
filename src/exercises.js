@@ -8,17 +8,25 @@ if (a[0] === b[0] || a[a.length - 1] === b[b.length - 1]) {
 else {
   return false;
 }
-  // write your code here
 }
 
 function endsMeet(values, n) {
-  // write your code here
-let finalArray = [];
-finalArray.push(values[0]);
 
-for (let j = values.length - 1; ) 
-
+  let finalArray = [];
+if (values != null && values != undefined && n >= 0 && values.length >= n) {
+for (let j = 0; j < n; j++) {
+  finalArray.push(values[j])
 }
+for (let j = values.length - n; j < values.length; j++) {
+  finalArray.push(values[j])
+}
+return finalArray;
+}
+else {
+  return finalArray;
+}
+}
+
 
 function difference(numbers) {
   // write your code here
