@@ -30,6 +30,29 @@ else {
 
 function difference(numbers) {
   // write your code here
+  let largestNumber = 0;
+  let smallestNumber = Number.MAX_SAFE_INTEGER;
+  if (numbers != undefined && numbers.length >= 1) {
+    for(let j = 0; j < numbers.length; j++) {
+      if (isNaN(numbers[j]) == true)
+      return undefined;
+    }
+for (let j = 0; j < numbers.length; j++) {
+if (numbers[j] > largestNumber) {
+  largestNumber = numbers[j]
+}
+}
+for (let j = 0; j < numbers.length; j++) {
+  if (numbers[j] < smallestNumber) {
+    smallestNumber = numbers[j];
+  }
+}
+let subtraction = Number(largestNumber - smallestNumber);
+return subtraction;
+  }
+  else {
+    return undefined;
+  }
 }
 
 function max(number) {
