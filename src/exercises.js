@@ -79,6 +79,27 @@ else {
 
 function middle(values) {
   // write your code here
+  let result = [];
+  let empty = [];
+  if (values != undefined && values.length % 2 == 1 && values.length >= 3) {
+    let middle = Math.floor(values.length / 2)
+    let middleValue1 = values[(Math.floor(values.length / 2)) - 1];
+    let middleValue2 = values[Math.floor(values.length / 2)]
+    let middleValue3 = values[(Math.floor(values.length / 2)) + 1]
+    if (middleValue1 != undefined) {
+      result.push(middleValue1)
+    }
+    if (middleValue2 != undefined) {
+      result.push(middleValue2)
+    }
+    if (middleValue3 != undefined) {
+      result.push(middleValue3)
+    }
+    return result;
+  }
+  else {
+    return empty;
+  }
 }
 
 function increasing(numbers) {
