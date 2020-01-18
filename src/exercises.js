@@ -57,11 +57,19 @@ return subtraction;
 
 function max(number) {
   // write your code here
-  if (number != undefined && number % 2 == 1 && number.length >= 3){
+  let result = [];
+  if (number != undefined && number.length % 2 == 1 && number.length >= 3){
+    for(let j = 0; j < number.length; j++) {
+      if (isNaN(number[j]) == true)
+      return undefined;
+    }
     let first = number[0];
+    result.push(first);
     let middle = number[Math.floor(number.length / 2)];
+    result.push(middle);
     let last = number[number.length - 1];
-    let largest = Math.max(first, middle, last);
+    result.push(last);
+    let largest = Math.max(...result);
     return largest;
   }
 else {
