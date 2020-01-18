@@ -104,6 +104,30 @@ function middle(values) {
 
 function increasing(numbers) {
   // write your code here
+  let result = [];
+  let status = "";
+  if (numbers != undefined && numbers.length >= 1) {
+    for(let j = 0; j < numbers.length; j++) {
+      if (isNaN(numbers[j]) == true)
+      return false;
+    }
+for (let j = 0; j < numbers.length; j++) {
+  number1 = numbers[j];
+  number2 = numbers[j + 1];
+  number3 = numbers[j + 2];
+  if (number2 > number1 && number3 > number2) {
+    status = true;
+    break;
+  }
+  else {
+    status = false;
+  }
+}
+return status;
+}
+else {
+  return false;
+}
 }
 
 function everywhere(values, x) {
