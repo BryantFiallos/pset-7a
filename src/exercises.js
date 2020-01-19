@@ -190,28 +190,15 @@ function balance(numbers) {
         return false;
       }
     }
-    if (numbers.length % 2 == 0) {
-      let middle = (numbers.length / 2) - 1;
-      for (let j = 0; j <= middle; j++) {
-        sum1 += numbers[j];
-      }
-      for (let j = middle + 1; j < numbers.length; j++) {
-        sum2 += numbers[j];
+    for (let j = 0; j < numbers.length; j++) {
+      sum1 += numbers[j]
+      sum2 = 0;
+      for (let x = j+1; x < numbers.length; x++) {
+        sum2 += numbers[x]
       }
       if (sum1 == sum2) {
         status = true;
-      }
-    }
-    else if (numbers.length % 2 == 1) {
-      let middle = Math.floor(numbers.length / 2)
-      for (let j = 0; j < middle; j++) {
-        sum1 += numbers[j];
-      }
-      for (let j = middle + 1; j < numbers.length; j++) {
-        sum2 += numbers[j];
-      }
-      if (sum1 + numbers[middle] == sum2 || sum1 == numbers[middle] + sum2) {
-        status = true;
+        break;
       }
     }
     return status;
@@ -219,7 +206,6 @@ function balance(numbers) {
   else {
     return false;
   }
-  console.log("test");
 }
 
 function clumps(values) {
