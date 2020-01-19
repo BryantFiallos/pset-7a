@@ -149,10 +149,76 @@ function everywhere(values, x) {
 
 function consecutive(numbers) {
   // write your code here
+  let status = false;
+  if (numbers != undefined && numbers.length >= 2) {
+    for (let j = 0; j < numbers.length; j++) {
+      if (Number.isInteger(numbers[j]) == false) {
+        return false;
+      }
+    }
+    for (let j = 0; j < numbers.length; j++) {
+      number1 = numbers[j];
+      number2 = numbers[j + 1];
+      number3 = numbers[j + 2];
+      if (number1 % 2 == 0 && number2 % 2 == 0 && number3 % 2 == 0) {
+        status = true;
+        break;
+      }
+      else if (number1 % 2 == 1 && number2 % 2 == 1 && number3 % 2 == 1) {
+        status = true;
+        break;
+      }
+      else {
+        status = false;
+      }
+    }
+    return status;
+  }
+  else {
+    return false;
+  }
 }
 
 function balance(numbers) {
   // write your code here
+  let status = false;
+  let sum1 = 0;
+  let sum2 = 0;
+  if (numbers != undefined && numbers.length >= 2) {
+    for (let j = 0; j < numbers.length; j++) {
+      if (Number.isInteger(numbers[j]) == false) {
+        return false;
+      }
+    }
+    if (numbers.length % 2 == 0) {
+      let middle = (numbers.length / 2) - 1;
+      for (let j = 0; j <= middle; j++) {
+        sum1 += numbers[j];
+      }
+      for (let j = middle + 1; j < numbers.length; j++) {
+        sum2 += numbers[j];
+      }
+      if (sum1 == sum2) {
+        status = true;
+      }
+    }
+    else if (numbers.length % 2 == 1) {
+      let middle = Math.floor(numbers.length / 2)
+      for (let j = 0; j < middle; j++) {
+        sum1 += numbers[j];
+      }
+      for (let j = middle + 1; j < numbers.length; j++) {
+        sum2 += numbers[j];
+      }
+      if (sum1 + numbers[middle] == sum2 || sum1 == numbers[middle] + sum2) {
+        status = true;
+      }
+    }
+    return status;
+  }
+  else {
+    return false;
+  }
   console.log("test");
 }
 
