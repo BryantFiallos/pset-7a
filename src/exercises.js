@@ -135,12 +135,13 @@ function everywhere(values, x) {
   if (values != undefined && values.length >= 1 && x != undefined) {
     for(let j = 0; j < values.length; j++) {
       if (values[j] === x || values[j - 1] === x || values[j + 1] === x) {
-        return true;
+        status = true;
       }
       else {
         return false;
       }
     }
+    return status
   }
   else {
     return false;
@@ -210,6 +211,24 @@ function balance(numbers) {
 
 function clumps(values) {
   // write your code here
+  let clumpCounter = 0;
+  let checker = "";
+  if (values != undefined) {
+    for (j = 0; j < values.length; j++) {
+      valueBefore = values[j - 1]
+      value = values[j]
+      valueAfter = values [j + 1]
+      if (valueBefore === value) {
+      }
+      else if (value === valueAfter) {
+        clumpCounter++
+      }
+    }
+    return clumpCounter;
+  }
+  else {
+    return -1;
+  }
 }
 
 /*
