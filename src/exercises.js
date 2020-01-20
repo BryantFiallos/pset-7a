@@ -29,7 +29,7 @@ else {
 
 
 function difference(numbers) {
-  // write your code here
+
   let largestNumber = 0;
   let smallestNumber = Number.MAX_SAFE_INTEGER;
   if (numbers != undefined && numbers.length >= 1) {
@@ -56,7 +56,7 @@ return subtraction;
 }
 
 function max(number) {
-  // write your code here
+
   let result = [];
   if (number != undefined && number.length % 2 == 1 && number.length >= 3){
     for(let j = 0; j < number.length; j++) {
@@ -78,7 +78,7 @@ else {
 }
 
 function middle(values) {
-  // write your code here
+
   let result = [];
   let empty = [];
   if (values != undefined && values.length % 2 == 1 && values.length >= 3) {
@@ -103,7 +103,7 @@ function middle(values) {
 }
 
 function increasing(numbers) {
-  // write your code here
+
   let result = [];
   let status = "";
   if (numbers != undefined && numbers.length >= 1) {
@@ -131,7 +131,7 @@ else {
 }
 
 function everywhere(values, x) {
-  // write your code here
+
   if (values != undefined && values.length >= 1 && x != undefined) {
     for(let j = 0; j < values.length; j++) {
       if (values[j] === x || values[j - 1] === x || values[j + 1] === x) {
@@ -149,7 +149,7 @@ function everywhere(values, x) {
 }
 
 function consecutive(numbers) {
-  // write your code here
+
   let status = false;
   if (numbers != undefined && numbers.length >= 2) {
     for (let j = 0; j < numbers.length; j++) {
@@ -181,7 +181,7 @@ function consecutive(numbers) {
 }
 
 function balance(numbers) {
-  // write your code here
+
   let status = false;
   let sum1 = 0;
   let sum2 = 0;
@@ -210,7 +210,7 @@ function balance(numbers) {
 }
 
 function clumps(values) {
-  // write your code here
+  
   let clumpCounter = 0;
   let checker = "";
   if (values != undefined) {
